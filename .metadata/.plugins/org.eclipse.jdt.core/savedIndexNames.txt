@@ -14,5 +14,4 @@ INDEX VERSION 1.127+/home/georgi/workspace/DroneDeliverySystem/DroneDeliverySyst
 2721024321.index
 4080801738.index
 491373497.index
-2491047573.index
 4162280243.index

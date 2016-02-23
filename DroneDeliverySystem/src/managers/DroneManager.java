@@ -24,12 +24,13 @@ public class DroneManager {
 		
 		double distWarehouseDeliveryLocation = distanceFromWarehouseToDeliveryLocation(deliveryLocation);
 		
-		//TODO check for available drones and calculate ETA	
+		//TODO check for available drones and calculate ETA	properly
+		//sort drones by battery charge maybe?
+		//keep track of their battery charge and location maybe?
 		
 		
 		// LOADING DRONES
 		for (Drone drone : drones) {
-			//sort drones by battery charge maybe?
 			if(drone.getBattery() >= distWarehouseDeliveryLocation * 2) {
 			
 				
@@ -74,6 +75,7 @@ public class DroneManager {
 					for (Map.Entry<Product, Integer> product : products.entrySet()) {
 						System.out.println(product.getKey() + ": " + product.getValue());
 					}
+					System.out.println();
 					// -
 				}
 			}

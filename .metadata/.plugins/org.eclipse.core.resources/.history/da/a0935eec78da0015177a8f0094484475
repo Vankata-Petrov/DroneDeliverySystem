@@ -1,0 +1,21 @@
+package droneDeliverySystem;
+
+import droneDeliverySystem.Request;
+
+public class RequestProducer extends Thread {
+
+	private RequestManager requestManager;
+	
+	public RequestProducer(RequestManager requestManager) {
+		this.requestManager = requestManager;
+	}
+	
+	public void run() {
+		while (true) {
+			// UI -> somoeone has to add supply and delivary requests
+			Request request = null;
+			requestManager.addRequest(request);
+		}
+	}
+	
+}
