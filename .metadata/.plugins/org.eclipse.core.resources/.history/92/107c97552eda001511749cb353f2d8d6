@@ -1,0 +1,36 @@
+package droneDeliverySystem;
+
+import java.util.Date;
+import java.util.Map;
+import java.util.UUID;
+
+public class DeliveryRequest implements Request{
+	
+	private String id;
+	private Date timestamp;
+	private Location location;
+	private Map<Product, Integer> products;
+	
+	public DeliveryRequest() {
+		id = UUID.randomUUID().toString();
+	}
+
+	@Override
+	public int getID() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public Date getTimestamp() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Map<Product, Integer> getProducts() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

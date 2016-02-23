@@ -1,0 +1,26 @@
+package droneDeliverySystem;
+
+import java.util.Date;
+import java.util.Map;
+
+public class SupplyRequest implements Request {
+
+	@Override
+	public int getID() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public Date getTimestamp() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Map<Product, Integer> getProducts() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
