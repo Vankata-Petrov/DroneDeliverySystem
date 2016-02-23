@@ -1,0 +1,186 @@
+!SESSION 2016-02-22 21:40:07.864 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.7.0_95
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2016-02-22 21:40:35.613
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-02-22 21:40:35.613
+!MESSAGE A conflict occurred for ALT+SHIFT+D R:
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.debug,Debug on Server,
+		Debug the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@c5dafe6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.debug,Debug RAP Application,
+		Debug RAP Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5ac72b61,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-02-22 21:40:35.613
+!MESSAGE A conflict occurred for ALT+SHIFT+X R:
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.run,Run on Server,
+		Run the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@49f11bd6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.run,Run RAP Application,
+		Run RAP Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@745aa486,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 4 0 2016-02-22 21:42:15.918
+!MESSAGE Invalid project description.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.core.internal.resources.Project.checkDescription(Project.java:168)
+	at org.eclipse.core.internal.resources.Project.assertCreateRequirements(Project.java:52)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:268)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:252)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createExistingProject(ProjectUtils.java:175)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.access$0(ProjectUtils.java:138)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils$1.run(ProjectUtils.java:97)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2225)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createProjects(ProjectUtils.java:130)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createProjects(ProjectUtils.java:60)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.importProjects(GitImportWizard.java:253)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.access$2(GitImportWizard.java:235)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard$4.run(GitImportWizard.java:205)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: OK
+Contains: /media/vankata/ARHIVE/Programing/HackBulgaria-Programming101/DroneDeliverySystem/DroneDeliverySystem overlaps the workspace location: /media/vankata/ARHIVE/Programing/HackBulgaria-Programming101/DroneDeliverySystem/DroneDeliverySystem
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2016-02-22 21:42:15.922
+!MESSAGE Invalid project description.
+!SUBENTRY 2 unknown 0 0 2016-02-22 21:42:15.922
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.core.resources 4 77 2016-02-22 21:42:15.922
+!MESSAGE /media/vankata/ARHIVE/Programing/HackBulgaria-Programming101/DroneDeliverySystem/DroneDeliverySystem overlaps the workspace location: /media/vankata/ARHIVE/Programing/HackBulgaria-Programming101/DroneDeliverySystem/DroneDeliverySystem
+
+!ENTRY org.eclipse.egit.ui 4 0 2016-02-22 21:42:52.771
+!MESSAGE Invalid project description.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.core.internal.resources.Project.checkDescription(Project.java:168)
+	at org.eclipse.core.internal.resources.Project.assertCreateRequirements(Project.java:52)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:268)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:252)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createExistingProject(ProjectUtils.java:175)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.access$0(ProjectUtils.java:138)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils$1.run(ProjectUtils.java:97)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2225)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createProjects(ProjectUtils.java:130)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createProjects(ProjectUtils.java:60)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.importProjects(GitImportWizard.java:253)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.access$2(GitImportWizard.java:235)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard$4.run(GitImportWizard.java:205)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: OK
+Contains: /media/vankata/ARHIVE/Programing/HackBulgaria-Programming101/DroneDeliverySystem/DroneDeliverySystem overlaps the workspace location: /media/vankata/ARHIVE/Programing/HackBulgaria-Programming101/DroneDeliverySystem/DroneDeliverySystem
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2016-02-22 21:42:52.771
+!MESSAGE Invalid project description.
+!SUBENTRY 2 unknown 0 0 2016-02-22 21:42:52.771
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.core.resources 4 77 2016-02-22 21:42:52.771
+!MESSAGE /media/vankata/ARHIVE/Programing/HackBulgaria-Programming101/DroneDeliverySystem/DroneDeliverySystem overlaps the workspace location: /media/vankata/ARHIVE/Programing/HackBulgaria-Programming101/DroneDeliverySystem/DroneDeliverySystem
+
+!ENTRY org.eclipse.egit.ui 4 0 2016-02-22 21:43:33.858
+!MESSAGE Invalid project description.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.core.internal.resources.Project.checkDescription(Project.java:168)
+	at org.eclipse.core.internal.resources.Project.assertCreateRequirements(Project.java:52)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:268)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:252)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createExistingProject(ProjectUtils.java:175)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.access$0(ProjectUtils.java:138)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils$1.run(ProjectUtils.java:97)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2225)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createProjects(ProjectUtils.java:130)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createProjects(ProjectUtils.java:60)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.importProjects(GitImportWizard.java:253)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.access$2(GitImportWizard.java:235)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard$4.run(GitImportWizard.java:205)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: OK
+Contains: /media/vankata/ARHIVE/Programing/HackBulgaria-Programming101/DroneDeliverySystem/DroneDeliverySystem overlaps the workspace location: /media/vankata/ARHIVE/Programing/HackBulgaria-Programming101/DroneDeliverySystem/DroneDeliverySystem
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2016-02-22 21:43:33.858
+!MESSAGE Invalid project description.
+!SUBENTRY 2 unknown 0 0 2016-02-22 21:43:33.858
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.core.resources 4 77 2016-02-22 21:43:33.858
+!MESSAGE /media/vankata/ARHIVE/Programing/HackBulgaria-Programming101/DroneDeliverySystem/DroneDeliverySystem overlaps the workspace location: /media/vankata/ARHIVE/Programing/HackBulgaria-Programming101/DroneDeliverySystem/DroneDeliverySystem
+
+!ENTRY org.eclipse.egit.ui 4 0 2016-02-22 21:50:52.503
+!MESSAGE Invalid project description.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.core.internal.resources.Project.checkDescription(Project.java:168)
+	at org.eclipse.core.internal.resources.Project.assertCreateRequirements(Project.java:52)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:268)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:252)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createExistingProject(ProjectUtils.java:175)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.access$0(ProjectUtils.java:138)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils$1.run(ProjectUtils.java:97)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2225)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createProjects(ProjectUtils.java:130)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createProjects(ProjectUtils.java:60)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.importProjects(GitImportWizard.java:253)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.access$2(GitImportWizard.java:235)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard$4.run(GitImportWizard.java:205)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: OK
+Contains: /media/vankata/ARHIVE/Programing/HackBulgaria-Programming101/DroneDeliverySystem/DroneDeliverySystem overlaps the workspace location: /media/vankata/ARHIVE/Programing/HackBulgaria-Programming101/DroneDeliverySystem/DroneDeliverySystem
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2016-02-22 21:50:52.504
+!MESSAGE Invalid project description.
+!SUBENTRY 2 unknown 0 0 2016-02-22 21:50:52.504
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.core.resources 4 77 2016-02-22 21:50:52.504
+!MESSAGE /media/vankata/ARHIVE/Programing/HackBulgaria-Programming101/DroneDeliverySystem/DroneDeliverySystem overlaps the workspace location: /media/vankata/ARHIVE/Programing/HackBulgaria-Programming101/DroneDeliverySystem/DroneDeliverySystem
+
+!ENTRY org.eclipse.egit.ui 4 0 2016-02-22 21:51:33.007
+!MESSAGE Invalid project description.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.core.internal.resources.Project.checkDescription(Project.java:168)
+	at org.eclipse.core.internal.resources.Project.assertCreateRequirements(Project.java:52)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:268)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:252)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createExistingProject(ProjectUtils.java:175)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.access$0(ProjectUtils.java:138)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils$1.run(ProjectUtils.java:97)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2225)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createProjects(ProjectUtils.java:130)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createProjects(ProjectUtils.java:60)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.importProjects(GitImportWizard.java:253)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.access$2(GitImportWizard.java:235)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard$4.run(GitImportWizard.java:205)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: OK
+Contains: /media/vankata/ARHIVE/Programing/HackBulgaria-Programming101/DroneDeliverySystem/DroneDeliverySystem overlaps the workspace location: /media/vankata/ARHIVE/Programing/HackBulgaria-Programming101/DroneDeliverySystem/DroneDeliverySystem
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2016-02-22 21:51:33.008
+!MESSAGE Invalid project description.
+!SUBENTRY 2 unknown 0 0 2016-02-22 21:51:33.008
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.core.resources 4 77 2016-02-22 21:51:33.008
+!MESSAGE /media/vankata/ARHIVE/Programing/HackBulgaria-Programming101/DroneDeliverySystem/DroneDeliverySystem overlaps the workspace location: /media/vankata/ARHIVE/Programing/HackBulgaria-Programming101/DroneDeliverySystem/DroneDeliverySystem
