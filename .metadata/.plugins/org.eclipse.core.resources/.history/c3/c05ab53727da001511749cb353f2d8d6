@@ -1,0 +1,26 @@
+package droneDeliverySystem;
+
+import java.util.Map;
+
+public class Warehouse {
+	private final Location warehouseLocation;
+	private Map<Product, Integer> availableProducts;
+	
+	
+	public Warehouse(Location warehouseLocation) {
+		this.warehouseLocation = warehouseLocation;
+	}
+
+	public Location getLocation() {
+		return warehouseLocation;
+	}
+	
+	boolean isProductAvailable(Product product, int quantity) {
+		if(availableProducts.containsKey(product)) {
+			int quantityInWarehouse = availableProducts.get(product);
+			return quantityInWarehouse >= quantity;
+		} 
+		return false;
+	}
+	
+}

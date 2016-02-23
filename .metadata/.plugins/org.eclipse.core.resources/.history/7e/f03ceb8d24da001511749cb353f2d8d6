@@ -1,0 +1,10 @@
+package droneDeliverySystem;
+
+public class Product {
+	
+	private final String name;
+	private final double weightPerQuantity;
+	
+	Pro
+
+}

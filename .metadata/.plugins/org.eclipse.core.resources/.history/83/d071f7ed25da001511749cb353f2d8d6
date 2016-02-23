@@ -1,0 +1,15 @@
+package droneDeliverySystem;
+
+import java.util.Map;
+
+public class Warehouse {
+	private final int xCoordinate;
+	private final int yCoordinate;
+	private Map<Product, Integer> availableProducts;
+	
+	public Warehouse(int xCoord, int yCoord) {
+		xCoordinate = xCoord;
+		yCoordinate = yCoord;
+	}
+	
+}
