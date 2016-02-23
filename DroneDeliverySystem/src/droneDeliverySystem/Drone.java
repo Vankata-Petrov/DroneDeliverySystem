@@ -4,13 +4,15 @@ public class Drone {
 	
 	private static int count=0;	
 	private final int ID;
-	private int batteryLevel;
+	private final int maxBatteryLevel;
+	private int currentBatteryLevel;
 	private final int capacity;
 	private final int chargingRate;
 	
-	public Drone(int ID, int battery, int capacity, int chargingRate) {
+	public Drone(int ID, int maxBattery, int capacity, int chargingRate) {
 		this.ID = count;
-		this.batteryLevel = battery;
+		this.maxBatteryLevel = maxBattery;
+		currentBatteryLevel = maxBatteryLevel;
 		this.capacity = capacity;
 		this.chargingRate = chargingRate;
 		count++;
@@ -21,11 +23,11 @@ public class Drone {
 	}
 	
 	public void setBatteryLevel(int currentLevel) {
-		batteryLevel = currentLevel;
+		currentBatteryLevel = currentLevel;
 	}
 	
 	public int getBattery() {
-		return this.batteryLevel;
+		return this.currentBatteryLevel;
 	}
 	
 	public int getCapacity() {
@@ -35,5 +37,7 @@ public class Drone {
 	public int getChargingRate() {
 		return this.chargingRate;
 	}
+	
+	
 
 }

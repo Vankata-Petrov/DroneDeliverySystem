@@ -19,6 +19,12 @@ public class Product {
 	}
 	
 	@Override
+	public String toString() {
+		String result = "Product [Name: " + mName + ", Weight: " + mWeightPerQuantity +"]";
+		return result;
+	}
+	
+	@Override
 	public boolean equals(Object obj) {
 		if(obj == null || !(obj instanceof Product)) {
 			return false;

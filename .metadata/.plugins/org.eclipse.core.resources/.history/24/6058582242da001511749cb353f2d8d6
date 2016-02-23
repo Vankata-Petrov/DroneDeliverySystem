@@ -1,0 +1,35 @@
+package droneDeliverySystem;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import managers.DroneManager;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Drone firstDrone = new Drone(5, 2000, 500, 5);
+		Location location = new Location(87, 98);
+		Warehouse warehouse = new Warehouse(new Location(42, 42));
+		List<Drone> droneList = new ArrayList<>();
+		droneList.add(firstDrone);
+		
+		Product apple = new Product("apple", 10);
+		Product banana = new Product("banana", 5);
+		Product nescafe = new Product("nescafe", 8);
+		
+		
+		Map<Product, Integer> products = new HashMap<>();
+		products.put(apple, 5);
+		products.put(banana, 3);
+		products.put(nescafe, 9);
+		
+		
+		DroneManager d_manager = new DroneManager(droneList);
+		d_manager.executeDelivery(products, location, warehouse, "232");
+		
+	}
+
+}

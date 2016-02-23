@@ -1,0 +1,6 @@
+1456238238329	Rename field 'batteryLevel'
+1456238463268	Rename local variable 'battery'
+1456246031641	Rename local variable 'product'
+1456246639294	Rename local variable 'currentCapacity'
+1456251675902	Rename method 'maxToCarry'
+1456251699488	Rename local variable 'toCarry'

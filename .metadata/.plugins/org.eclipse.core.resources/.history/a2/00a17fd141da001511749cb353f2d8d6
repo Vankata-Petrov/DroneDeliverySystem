@@ -1,0 +1,11 @@
+package droneDeliverySystem;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Drone firstDrone = new Drone(5, 2000, 500, 5);
+		Location location = new Location(87, 98);
+		Warehouse warehouse = new Warehouse(new Location(42, 42));
+	}
+
+}
