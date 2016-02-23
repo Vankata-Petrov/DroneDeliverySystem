@@ -18,11 +18,6 @@ public class DeliveryRequest implements Request{
 		this.products = products;
 	}
 	
-
-	public Location getLocation() {
-		return location;
-	}
-	
 	@Override
 	public String getID() {
 		return id;
@@ -36,6 +31,11 @@ public class DeliveryRequest implements Request{
 	@Override
 	public Map<Product, Integer> getProducts() {
 		return products;
+	}
+	
+	@Override
+	public Location getLocation() {
+		return location;
 	}
 
 }

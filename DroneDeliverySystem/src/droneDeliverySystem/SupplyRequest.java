@@ -31,4 +31,12 @@ public class SupplyRequest implements Request {
 	public Map<Product, Integer> getProducts() {
 		return products;
 	}
+
+
+	@Override
+	//We don't need it here
+	public Location getLocation() {
+		return null;
+	}
+	
 }
