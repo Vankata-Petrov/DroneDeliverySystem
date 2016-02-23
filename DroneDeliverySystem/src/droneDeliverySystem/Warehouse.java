@@ -43,5 +43,27 @@ public class Warehouse {
 			availableProducts.put(product, quantity);
 		}
 	}
+
+	@Override
+	public int hashCode() {
+		return (String.valueOf(warehouseLocation.getXCoordinate())+
+				String.valueOf(warehouseLocation.getYCoordinate())
+				).hashCode();
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if(obj == null || !(obj instanceof Warehouse)) {
+			return false;
+		}
+		Warehouse secondWarehouse=(Warehouse)obj;
+		
+		if(warehouseLocation.getXCoordinate()==secondWarehouse.warehouseLocation.getXCoordinate()){
+			if(warehouseLocation.getYCoordinate()==secondWarehouse.warehouseLocation.getYCoordinate()){
+				return true;
+			}
+		}
+		return false;
+	}
 	
 }
