@@ -136,7 +136,6 @@ public class DroneManager {
 		Drone currentDrone = entry.getKey();
 		Date getWarehouseArrivalTime = entry.getValue();
 		timeToLocation = getWarehouseArrivalTime.getTime();
-		System.out.println(getWarehouseArrivalTime.getTime());
 		
 		double neededBattery = distanceFromWarehouseToDeliveryLocation(deliveryLocation); 
 		if(neededBattery > currentDrone.getBattery() * 2) {
