@@ -248,5 +248,8 @@ public class DroneManager {
 		drones.add(toAdd);
 <<<<<<< HEAD
 	}*/
+=======
+	}
 
+>>>>>>> 36df7563b32f527a216aea7294013e9807a44df7
 }

@@ -35,8 +35,13 @@ public class DroneManager {
 		this.warehouse=warehouse;
 	}
 	
+<<<<<<< HEAD
 	public String executeDelivery(Map<Product, Integer> products, Location deliveryLocation, String requestId, Date startTime) {
-
+=======
+	public void executeDelivery(Map<Product, Integer> products, Location deliveryLocation, String requestId, Date date) {
+		
+		double distWarehouseDeliveryLocation = distanceFromWarehouseToDeliveryLocation(deliveryLocation);
+>>>>>>> 36df7563b32f527a216aea7294013e9807a44df7
 		
 		//TODO check for available drones and calculate ETA	properly
 		//sort drones by battery charge maybe?
@@ -248,5 +253,8 @@ public class DroneManager {
 		drones.add(toAdd);
 <<<<<<< HEAD
 	}*/
+=======
+	}
 
+>>>>>>> 36df7563b32f527a216aea7294013e9807a44df7
 }
