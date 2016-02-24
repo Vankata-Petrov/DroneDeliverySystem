@@ -20,6 +20,11 @@ public class DroneManager {
 		warehouse = new Warehouse(new Location(42, 42));
 	}
 	
+	public DroneManager(List<Drone> drones,Warehouse warehouse){
+		this.drones=drones;
+		this.warehouse=warehouse;
+	}
+	
 	public void executeDelivery(Map<Product, Integer> products, Location deliveryLocation, String requestId) {
 		
 		double distWarehouseDeliveryLocation = distanceFromWarehouseToDeliveryLocation(deliveryLocation);

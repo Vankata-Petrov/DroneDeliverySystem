@@ -1,11 +1,13 @@
 package droneDeliverySystem;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import managers.DroneManager;
+import managers.WarehouseManager;
 
 public class Main {
 
@@ -42,6 +44,19 @@ public class Main {
 		
 		DroneManager d_manager = new DroneManager(droneList);
 		d_manager.executeDelivery(products, location, "232");
+		//Trying the WarehouseManager
+		/*
+		Map<Product,Integer> productsToDeliver=new HashMap();
+		productsToDeliver.put(eggs,4);
+		Date d = new Date(2016, 02, 23);
+		Request sr = new SupplyRequest(d, new Location(42,42), products);
+		Request dr = new DeliveryRequest(d, location,productsToDeliver);
+		WarehouseManager.warehouses.add(warehouse);
+		WarehouseManager.doRequest(sr);
+		WarehouseManager.doRequest(dr);
+		for(Warehouse x:WarehouseManager.warehouses){
+			System.out.println(x.isProductAvailable(eggs, 1));
+		}*/
 	}
 }
 /*=======

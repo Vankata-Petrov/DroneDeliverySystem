@@ -1,14 +1,15 @@
 package droneDeliverySystem;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class Warehouse {
 	private final Location warehouseLocation;
 	private Map<Product, Integer> availableProducts;
 	
-	
 	public Warehouse(Location warehouseLocation) {
 		this.warehouseLocation = warehouseLocation;
+		availableProducts=new HashMap<>();
 	}
 
 	public Location getLocation() {

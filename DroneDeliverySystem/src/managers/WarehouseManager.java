@@ -1,10 +1,19 @@
-package droneDeliverySystem;
+package managers;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Map;
 
+import droneDeliverySystem.Location;
+import droneDeliverySystem.Product;
+import droneDeliverySystem.Request;
+import droneDeliverySystem.SupplyRequest;
+import droneDeliverySystem.DeliveryRequest;
+import droneDeliverySystem.Drone;
+import droneDeliverySystem.Warehouse;
+
 public final class WarehouseManager {
-	private static LinkedList<Warehouse> warehouses = new LinkedList<>();
+	public static LinkedList<Warehouse> warehouses = new LinkedList<>();
 	private static Location location = new Location(42, 42);
 	/**
 	 * Will need this method if we have more warehouses
@@ -42,8 +51,11 @@ public final class WarehouseManager {
 			} else {
 				// TODO: exception for no existing warehouse where to do supplyRequest
 			}
-		} else if (request instanceof SupplyRequest) {
-			// TODO: Call DroneManager function
+		} else if (request instanceof DeliveryRequest) {
+			ArrayList<Drone> drones=new ArrayList<>();
+			drones.add(new Drone(1,2000,500,5));
+			DroneManager droneManager=new DroneManager(drones,new Warehouse(location));
+			droneManager.executeDelivery(request.getProducts(), request.getLocation(), request.getID());
 		}
 	}
 	
