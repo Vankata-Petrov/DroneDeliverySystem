@@ -1,6 +1,7 @@
 package droneDeliverySystem;
 
 import java.util.ArrayList;
+
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -8,6 +9,9 @@ import java.util.Map;
 
 import managers.DroneManager;
 import managers.WarehouseManager;
+import requests.RequestManager;
+import requests.RequestProducer;
+import requests.RequestsConsumer;
 
 public class Main {
 
@@ -41,9 +45,18 @@ public class Main {
 		products.put(milk, 2);
 		products.put(eggs, 20);
 		
+		RequestManager rm = new RequestManager();
+		RequestProducer rp = new RequestProducer(rm);
+		RequestsConsumer rc = new RequestsConsumer(rm);
 		
-		DroneManager d_manager = new DroneManager(droneList);
-		d_manager.executeDelivery(products, location, "232");
+		rp.start();
+		rc.start();
+		//rp.run();
+		//rc.run();
+		
+		
+		//DroneManager d_manager = new DroneManager(droneList);
+		//d_manager.executeDelivery(products, location, "232");
 		//Trying the WarehouseManager
 		/*
 		Map<Product,Integer> productsToDeliver=new HashMap();

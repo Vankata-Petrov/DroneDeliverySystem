@@ -1,9 +1,12 @@
 package managers;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+
+import javax.xml.crypto.Data;
 
 import droneDeliverySystem.Drone;
 import droneDeliverySystem.Location;
@@ -25,7 +28,7 @@ public class DroneManager {
 		this.warehouse=warehouse;
 	}
 	
-	public void executeDelivery(Map<Product, Integer> products, Location deliveryLocation, String requestId) {
+	public void executeDelivery(Map<Product, Integer> products, Location deliveryLocation, String requestId, Date date) {
 		
 		double distWarehouseDeliveryLocation = distanceFromWarehouseToDeliveryLocation(deliveryLocation);
 		
@@ -175,4 +178,5 @@ public class DroneManager {
 	public void addDrone(Drone toAdd) {
 		drones.add(toAdd);
 	}
+
 }

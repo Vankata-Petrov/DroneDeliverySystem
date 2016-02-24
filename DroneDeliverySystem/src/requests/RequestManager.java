@@ -1,10 +1,11 @@
-package droneDeliverySystem;
+package requests;
 
+import droneDeliverySystem.Request;
 import java.util.LinkedList;
 
 public class RequestManager {
 	
-	private LinkedList<Request> requests;
+	private LinkedList<Request> requests = new LinkedList<>();
 	
 	public Request getFront() {
 		return requests.poll();
@@ -16,6 +17,7 @@ public class RequestManager {
 	 * Adding delivery requests at the end for later use
 	 * @param request
 	 */
+	synchronized
 	public void addRequest(Request request) {
 		if(request.getClass().getSimpleName() == "DeliveryRequest") {
 			requests.add(request);
@@ -25,6 +27,7 @@ public class RequestManager {
 		notifyAll();
 	}
 	
+	synchronized
 	public Request sendRequest() {
 		while(requests.size() == 0) {
 			try {

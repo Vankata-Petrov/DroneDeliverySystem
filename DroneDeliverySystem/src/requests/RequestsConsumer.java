@@ -1,7 +1,8 @@
-package droneDeliverySystem;
+package requests;
 
 import managers.DroneManager;
 import managers.WarehouseManager;
+import droneDeliverySystem.Request;
 
 public class RequestsConsumer extends Thread {
 	
@@ -18,7 +19,7 @@ public class RequestsConsumer extends Thread {
 		if(request.getClass().getSimpleName() == "DeliveryRequest") {
 			
 			if(warehouseManager.productsAvailabilityChecker(request.getProducts())) {
-				droneManager.executeDelivery(request.getProducts(), request.getLocation(), request.getID());
+				droneManager.executeDelivery(request.getProducts(), request.getLocation(), request.getID(), request.getTimestamp());
 			}
 			
 		} else {
