@@ -27,17 +27,17 @@ public class Main {
 		
 		Product apple = new Product("apple", 10);
 		Product banana = new Product("banana", 5);
-		Product nescafe = new Product("nescafe", 8);
-		Product milk = new Product("milk", 7);
-		Product eggs = new Product("eggs", 4);
+		//Product nescafe = new Product("nescafe", 8);
+		//Product milk = new Product("milk", 7);
+		//Product eggs = new Product("eggs", 4);
 		
 		
 		Map<Product, Integer> products = new HashMap<>();
 		products.put(apple, 5);
 		products.put(banana, 3);
-		//products.put(nescafe, 9);
-		//products.put(milk, 2);
-		//products.put(eggs, 20);
+		products.put(nescafe, 9);
+		products.put(milk, 2);
+		products.put(eggs, 20);
 		
 		
 		DroneManager d_manager = new DroneManager(droneList);

@@ -28,16 +28,10 @@ public class DroneManager {
 		//TODO check for available drones and calculate ETA	properly
 		//sort drones by battery charge maybe?
 		//keep track of their battery charge and location maybe?
-		// use priority queue instead of list of drones?
 		
-		// this synchronized maybe?
 		List<Drone> neededDrones = getNeededDrones(products, drones);
-		//-
-		
-		
-		
 		// LOADING DRONES
-		for (Drone drone: neededDrones) {
+		for (Drone drone: drones) {
 			if(drone.getBattery() >= distWarehouseDeliveryLocation * 2) {
 			
 				
@@ -90,23 +84,12 @@ public class DroneManager {
 		
 	}
 
-	private List<Drone> getNeededDrones(Map<Product, Integer> products, List<Drone> drones) {
+	private List<Drone> getNeededDrones(Map<Product, Integer> products, List<Drone> drones2) {
 		double allProductsWeight = getAllProductsWeight(products);
 		List<Drone> deliveryDrones = new ArrayList<>();
-		
-		Iterator<Drone> droneIter = drones.iterator();
-		while(droneIter.hasNext()) {
-			if(allProductsWeight <= 0){
-				break;
-			}
-			Drone currentDrone = droneIter.next();
-			int droneCapacity = currentDrone.getCapacity();
-			deliveryDrones.add(currentDrone);
-			droneIter.remove();
-			allProductsWeight -= droneCapacity;
+		for (Drone drone: drones) {
+			
 		}
-		
-		return deliveryDrones;
 	}
 
 	private Map<Product, Integer> loadDrone(Map<Product, Integer> products, Drone drone) {

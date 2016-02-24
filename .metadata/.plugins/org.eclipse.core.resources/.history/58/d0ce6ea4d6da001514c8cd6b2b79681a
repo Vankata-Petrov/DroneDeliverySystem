@@ -1,6 +1,5 @@
 package managers;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -28,16 +27,10 @@ public class DroneManager {
 		//TODO check for available drones and calculate ETA	properly
 		//sort drones by battery charge maybe?
 		//keep track of their battery charge and location maybe?
-		// use priority queue instead of list of drones?
-		
-		// this synchronized maybe?
-		List<Drone> neededDrones = getNeededDrones(products, drones);
-		//-
-		
 		
 		
 		// LOADING DRONES
-		for (Drone drone: neededDrones) {
+		for (Drone drone : drones) {
 			if(drone.getBattery() >= distWarehouseDeliveryLocation * 2) {
 			
 				
@@ -88,25 +81,6 @@ public class DroneManager {
 			}
 		}
 		
-	}
-
-	private List<Drone> getNeededDrones(Map<Product, Integer> products, List<Drone> drones) {
-		double allProductsWeight = getAllProductsWeight(products);
-		List<Drone> deliveryDrones = new ArrayList<>();
-		
-		Iterator<Drone> droneIter = drones.iterator();
-		while(droneIter.hasNext()) {
-			if(allProductsWeight <= 0){
-				break;
-			}
-			Drone currentDrone = droneIter.next();
-			int droneCapacity = currentDrone.getCapacity();
-			deliveryDrones.add(currentDrone);
-			droneIter.remove();
-			allProductsWeight -= droneCapacity;
-		}
-		
-		return deliveryDrones;
 	}
 
 	private Map<Product, Integer> loadDrone(Map<Product, Integer> products, Drone drone) {
@@ -178,25 +152,21 @@ public class DroneManager {
 		int yWarehouse = warehouse.getLocation().getYCoordinate();
 		
 		// maybe wrong? - double distance = Math.sqrt( Math.pow((xWarehouse - xDelivery), 2) + Math.pow((yWarehouse - yDelivery), 2));
-		double distance = Math.pow(Math.pow((xWarehouse - xDelivery), 2) + Math.pow((yWarehouse - yDelivery), 2), -2);
+		double distance = Math.pow((xWarehouse - xDelivery), 2) + Math.pow((yWarehouse - yDelivery), -2);
 		return distance;
 	}
 	
 	// find the sum of all products' weights and check if they can be carried by one drone
 	public boolean canCarryAll(Map<Product, Integer> products, Drone drone) {
-		double allProductsWeight = getAllProductsWeight(products);
-		return allProductsWeight <= drone.getCapacity();
-	}
-	
-	private double getAllProductsWeight(Map<Product, Integer> products) {
 		double result = 0;
 		
 		for (Map.Entry<Product, Integer> product : products.entrySet()) {
 			result += product.getKey().getWeightPerQuantity() * product.getValue();
 		}
-		return result;
+		
+		return result <= drone.getCapacity();
 	}
-
+	
 	public void addDrone(Drone toAdd) {
 		drones.add(toAdd);
 	}

@@ -35,7 +35,7 @@ public class Main {
 		Map<Product, Integer> products = new HashMap<>();
 		products.put(apple, 5);
 		products.put(banana, 3);
-		//products.put(nescafe, 9);
+		products.put(nescafe, 9);
 		//products.put(milk, 2);
 		//products.put(eggs, 20);
 		
