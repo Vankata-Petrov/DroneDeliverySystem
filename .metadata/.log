@@ -1722,3 +1722,394 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1488)
+!SESSION 2016-02-24 18:20:22.406 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_66
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 18:21:17.534
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 18:21:52.066
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 18:21:52.765
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 18:23:26.777
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 18:23:26.778
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 18:23:26.781
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 18:23:26.790
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 18:23:26.794
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 18:42:41.555
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 18:42:41.999
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 18:51:31.193
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 18:51:31.377
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 19:02:01.570
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 19:02:01.720
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 19:02:03.512
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 19:02:03.549
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 19:11:45.984
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 19:11:46.142
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 19:37:38.802
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 19:37:38.981
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 19:46:39.098
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 19:46:39.381
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 19:49:46.748
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 19:49:46.903
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 19:50:14.892
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 19:50:15.049
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 19:50:40.928
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 19:50:41.081
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 19:51:01.272
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 19:51:01.453
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 19:52:14.089
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 19:52:14.242
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 19:52:21.796
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 19:52:21.953
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 19:53:28.798
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 19:53:28.952
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 19:53:43.537
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 19:53:43.712
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 19:53:53.218
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 19:53:53.373
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 19:54:28.434
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 19:54:28.597
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 19:54:36.178
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 19:54:36.329
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 19:57:27.639
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 19:57:27.666
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:04:29.365
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:04:29.565
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:04:45.897
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:04:46.075
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:14:35.022
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:14:35.182
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:16:43.659
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:16:43.821
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:20:50.422
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:20:50.583
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:22:56.250
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:22:56.402
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:24:33.313
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:24:33.468
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:27:30.932
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:27:31.095
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:28:11.437
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:28:11.600
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:28:20.703
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:28:20.855
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:29:04.971
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:29:05.126
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:32:05.860
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:32:06.014
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:32:11.215
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:32:11.369
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:35:11.874
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:35:12.004
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:37:07.113
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:37:07.266
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:38:03.339
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:38:03.500
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:38:08.398
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:38:08.548
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:39:43.894
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:39:44.047
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:40:23.802
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:40:23.957
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:40:44.743
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:40:44.900
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:44:23.830
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:44:23.982
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:45:05.898
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:45:06.054
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:45:11.435
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:45:11.586
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:45:23.294
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:45:23.414
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:47:02.030
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:47:02.181
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:47:51.355
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:47:51.509
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:50:29.727
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:50:29.922
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:50:46.629
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:50:46.784
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:51:06.302
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:51:06.454
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:51:19.530
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:51:19.681
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:55:11.360
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:55:11.513
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:56:18.198
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:56:18.353
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:58:22.018
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 20:58:22.168
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 21:00:17.735
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 21:00:17.757
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 21:00:51.199
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 21:00:51.231
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 21:01:27.876
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 21:01:27.897
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 21:03:15.610
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 21:03:15.632
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 21:03:30.144
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 21:03:30.163
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 21:05:06.887
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 21:05:07.040
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 21:07:00.265
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 21:07:00.418
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 21:12:44.852
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-24 21:12:44.980
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace

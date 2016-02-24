@@ -17,4 +17,9 @@ public class Location {
 	public int getYCoordinate() {
 		return yCoordinate;
 	}
+	
+	@Override
+	public String toString() {
+		return "Location[" + xCoordinate + ", " + yCoordinate + "]";
+	}
 }

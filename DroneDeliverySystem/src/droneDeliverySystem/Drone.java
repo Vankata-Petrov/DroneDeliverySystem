@@ -4,16 +4,16 @@ public class Drone {
 	
 	private static int count=0;	
 	private final int ID;
+	private final int weightCapacity;
 	private final int maxBatteryLevel;
 	private int currentBatteryLevel;
-	private final int capacity;
 	private final int chargingRate;
 	
 	public Drone(int ID, int maxBattery, int capacity, int chargingRate) {
 		this.ID = count;
 		this.maxBatteryLevel = maxBattery;
 		currentBatteryLevel = maxBatteryLevel;
-		this.capacity = capacity;
+		this.weightCapacity = capacity;
 		this.chargingRate = chargingRate;
 		count++;
 	}
@@ -31,7 +31,7 @@ public class Drone {
 	}
 	
 	public int getCapacity() {
-		return this.capacity;
+		return this.weightCapacity;
 	}
 	
 	public int getChargingRate() {

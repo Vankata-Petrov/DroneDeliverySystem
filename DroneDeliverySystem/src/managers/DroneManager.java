@@ -1,10 +1,14 @@
 package managers;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 import droneDeliverySystem.Drone;
 import droneDeliverySystem.Location;
@@ -13,100 +17,144 @@ import droneDeliverySystem.Warehouse;
 
 public class DroneManager {
 	
-	private List<Drone> drones;
+	private Map<Drone, Date> drones;
 	private Warehouse warehouse;
+	private Lock lock;
 	
-	public DroneManager(List<Drone> drones) {
+	public DroneManager(Map<Drone, Date> drones) {
 		this.drones = drones;
 		warehouse = new Warehouse(new Location(42, 42));
+		lock = new ReentrantLock();
 	}
 	
-	public void executeDelivery(Map<Product, Integer> products, Location deliveryLocation, String requestId) {
-		
-		double distWarehouseDeliveryLocation = distanceFromWarehouseToDeliveryLocation(deliveryLocation);
+	public DroneManager(Map<Drone, Date> drones, Warehouse warehouse){
+		this.drones=drones;
+		this.warehouse=warehouse;
+	}
+	
+	public String executeDelivery(Map<Product, Integer> products, Location deliveryLocation, String requestId, Date startTime) {
 		
 		//TODO check for available drones and calculate ETA	properly
 		//sort drones by battery charge maybe?
 		//keep track of their battery charge and location maybe?
 		// use priority queue instead of list of drones?
-		
-		// this synchronized maybe?
-		List<Drone> neededDrones = getNeededDrones(products, drones);
-		//-
-		
-		
+		Drone minDrone = null;
 		
 		// LOADING DRONES
-		for (Drone drone: neededDrones) {
-			if(drone.getBattery() >= distWarehouseDeliveryLocation * 2) {
+		while(true) {
 			
+			// get min drone
+			minDrone = findMin(drones, deliveryLocation);
+			//System.out.println("MIN DRONE NEW NEW NEW TIME: " + drones.get(minDrone));
+			
+			// get min drone estimated by time
+			
+			if(canCarryAll(products, minDrone)) {
 				
-				
-				if(canCarryAll(products, drone)) {
-					
-					// PRINT SOME INFO
-					System.out.println(drone + " Drone delivering all products: ");
-					int productsWeight = 0;
-					for (Map.Entry<Product, Integer> product : products.entrySet()) {
-						System.out.println(product.getKey() + ": " + product.getValue());
-						productsWeight += product.getKey().getWeightPerQuantity() * product.getValue();
-					}
-					System.out.println("Drone weight capacity: " + drone.getCapacity() + ", Products weight: " + productsWeight);
-					// - 
-					
-					// load everything and directly deliver
-					deliver(drone, products, deliveryLocation);
-					break;
-					
-				} else {
-					
-					// load drone with as much products as it can carry
-					// returns map @toLoad with products to carry, meanwhile deleting them from @products
-					Map<Product, Integer> toLoad = loadDrone(products, drone);
-					
-					// PRINT SOME INFO
-					System.out.println(drone + " Drone delivering NOT all products: ");
-					int productsWeight = 0;
-					for (Map.Entry<Product, Integer> product : toLoad.entrySet()) {
-						System.out.println(product.getKey() + ": " + product.getValue());
-						productsWeight += product.getKey().getWeightPerQuantity() * product.getValue();
-					}
-					System.out.println(drone + " Drone weight capacity: " + drone.getCapacity() + ", Products weight: " + productsWeight);
-					// -
-					
-					// deliver the loaded drone
-					deliver(drone, toLoad, deliveryLocation);
-					
-					//PRINT SOME INFO
-					System.out.println("Still to be delivered: ");
-					for (Map.Entry<Product, Integer> product : products.entrySet()) {
-						System.out.println(product.getKey() + ": " + product.getValue());
-					}
-					System.out.println();
-					// -
+				// PRINT SOME INFO
+				/*System.out.println(minDrone + " Drone delivering all products: ");
+				int productsWeight = 0;
+				for (Map.Entry<Product, Integer> product : products.entrySet()) {
+					System.out.println(product.getKey() + ": " + product.getValue());
+					productsWeight += product.getKey().getWeightPerQuantity() * product.getValue();
 				}
+				System.out.println("Drone weight capacity: " + minDrone.getCapacity() + ", Products weight: " + productsWeight);
+				*/// - 
+				
+				// load everything and directly deliver
+				deliver(minDrone, products, deliveryLocation);
+				
+				
+				break;
+			} else {
+				
+				// load drone with as much products as it can carry
+				// returns map @toLoad with products to carry, meanwhile deleting them from @products
+				Map<Product, Integer> toLoad = loadDrone(products, minDrone);
+				
+				// PRINT SOME INFO
+			/*	System.out.println(minDrone + " Drone delivering NOT all products: ");
+				int productsWeight = 0;
+				for (Map.Entry<Product, Integer> product : toLoad.entrySet()) {
+					System.out.println(product.getKey() + ": " + product.getValue());
+					productsWeight += product.getKey().getWeightPerQuantity() * product.getValue();
+				}
+				System.out.println(drone + " Drone weight capacity: " + minDrone.getCapacity() + ", Products weight: " + productsWeight);
+				*/// -
+				
+
+				
+				// deliver the loaded drone
+				deliver(minDrone, toLoad, deliveryLocation);
+				
+				//PRINT SOME INFO
+			/*	System.out.println("Still to be delivered: ");
+				for (Map.Entry<Product, Integer> product : products.entrySet()) {
+					System.out.println(product.getKey() + ": " + product.getValue());
+				}
+				System.out.println();*/
+				// -
 			}
 		}
 		
+		String estimatedETA = "";
+		estimatedETA += drones.get(minDrone);
+		System.out.println("Request ID: " + requestId + ", Delivery Location: " + deliveryLocation + ", ETA: " + estimatedETA);
+		return estimatedETA;
 	}
 
-	private List<Drone> getNeededDrones(Map<Product, Integer> products, List<Drone> drones) {
-		double allProductsWeight = getAllProductsWeight(products);
-		List<Drone> deliveryDrones = new ArrayList<>();
-		
-		Iterator<Drone> droneIter = drones.iterator();
-		while(droneIter.hasNext()) {
-			if(allProductsWeight <= 0){
+	private Drone findMin(Map<Drone, Date> drones, Location deliveryLocation) {
+		long smallest = Long.MAX_VALUE;
+		Drone minDrone = null;
+		for (Map.Entry<Drone, Date> entry : drones.entrySet()) {
+			long currentTimeToLocation = timeToLocation(entry, deliveryLocation);
+			System.out.println("Time to location: " + currentTimeToLocation);
+			
+			if (entry.getValue().getTime() < System.currentTimeMillis()) {
+				minDrone = entry.getKey();
+				smallest = System.currentTimeMillis() + currentTimeToLocation;
 				break;
 			}
-			Drone currentDrone = droneIter.next();
-			int droneCapacity = currentDrone.getCapacity();
-			deliveryDrones.add(currentDrone);
-			droneIter.remove();
-			allProductsWeight -= droneCapacity;
+			
+			if(smallest > currentTimeToLocation) {
+				smallest = currentTimeToLocation;
+				minDrone = entry.getKey();
+			}
 		}
 		
-		return deliveryDrones;
+		//System.out.println("MIN DRONE ORIGINAL TIME: " + drones.get(minDrone));
+		//System.out.println("SMALLEST: " + smallest);
+		drones.put(minDrone, new Date(smallest));
+		//System.out.println("MIN DRONE NEW TIME: " + drones.get(minDrone));
+		
+		
+		return minDrone;
+	}
+
+	private long timeToLocation(Entry<Drone, Date> entry, Location deliveryLocation) {
+		long timeToLocation = 0;
+		Drone currentDrone = entry.getKey();
+		Date getWarehouseArrivalTime = entry.getValue();
+		timeToLocation = getWarehouseArrivalTime.getTime();
+		
+		double neededBattery = distanceFromWarehouseToDeliveryLocation(deliveryLocation); 
+		if(neededBattery > currentDrone.getBattery() * 2) {
+			long chargingTime = getChargingTime(currentDrone, neededBattery * 2);
+			neededBattery += chargingTime;
+		}
+		// cast maybe?
+		timeToLocation += (long)neededBattery;
+		
+		return timeToLocation;
+	}
+
+	private long getChargingTime(Drone currentDrone, double neededBattery) {
+		
+		double batterToCharge = neededBattery - currentDrone.getBattery();
+		
+		
+		return (long)(batterToCharge / currentDrone.getChargingRate()) * 60_000;
+		
 	}
 
 	private Map<Product, Integer> loadDrone(Map<Product, Integer> products, Drone drone) {
@@ -155,21 +203,15 @@ public class DroneManager {
 	}
 
 	private void deliver(Drone drone, Map<Product, Integer> products, Location deliveryLocation) {
-		estimateETA(deliveryLocation, products.size());
-		int currentBattery = drone.getBattery();
-		
-		int batteryCost = (int)distanceFromWarehouseToDeliveryLocation(deliveryLocation) * 2;
-		
-		//drone.setBatteryLevel(currentBattery - (int)distWarehouseDeliveryLocation * 2);
 		
 	}
 
-	private void estimateETA(Location deliveryLocation, int productsCount) {
+	private double estimateETA(Location deliveryLocation, int productsCount) {
 		double eta = distanceFromWarehouseToDeliveryLocation(deliveryLocation) + productsCount * 2;
 		System.out.println("Minutes to your delivery: " + eta);
-		
+		return eta;
 	}
-
+	//change name to neededbattery
 	private double distanceFromWarehouseToDeliveryLocation(Location deliveryLocation) {
 		int xDelivery = deliveryLocation.getXCoordinate();
 		int yDelivery = deliveryLocation.getYCoordinate();
@@ -197,7 +239,7 @@ public class DroneManager {
 		return result;
 	}
 
-	public void addDrone(Drone toAdd) {
+	/*public void addDrone(Drone toAdd) {
 		drones.add(toAdd);
-	}
+	}*/
 }

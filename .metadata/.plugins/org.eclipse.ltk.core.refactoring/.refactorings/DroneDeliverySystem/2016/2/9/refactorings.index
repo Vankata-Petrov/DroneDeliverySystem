@@ -10,3 +10,5 @@
 1456264905428	Rename package 'droneDeliverySystem'
 1456265314310	Move compilation units
 1456265441768	Rename package 'baseclasses'
+1456336879339	Rename local variable 'currentDrone'
+1456337084916	Rename field 'capacity'
