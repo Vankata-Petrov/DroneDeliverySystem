@@ -254,6 +254,100 @@ public class DroneManager {
 		System.out.println("New drone: " + drone);
 		System.out.println();
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/*int updatedBatteryLevel = 0;
+		
+		if(droneCurrentTime.getTime() < System.currentTimeMillis()) {
+			int minutesAtTheWarehouse = (int)(System.currentTimeMillis() - droneCurrentTime.getTime()) / 60_000;
+			int droneBattery = drone.getBattery().getcurrentBatteryLevel();
+			while(droneBattery < drone.getBattery().getMaxBatteryLevel() || minutesAtTheWarehouse > 0) {
+				updatedBatteryLevel += drone.getChargingRate();
+				--minutesAtTheWarehouse;
+			}
+		}
+		
+		System.out.println(drone);
+		
+		// charge if needed
+		updatedBatteryLevel += chargeBattery(drone, deliveryLocation);
+		//substract the battery that would be needed to go to the location and come back
+		updatedBatteryLevel += drone.getBattery().getcurrentBatteryLevel() - (int)(distanceLocationToWarehouse * 2);
+		drone.setBatteryLevel(updatedBatteryLevel);
+		
+		System.out.println("New battery level: " + drone.getBattery().getcurrentBatteryLevel());
+		
+		if(droneCurrentTime.getTime() > System.currentTimeMillis()) {
+			System.out.println("Starting time: " + droneCurrentTime.toString());
+			
+		} else {
+			System.out.println("Starting time: " + new Date(System.currentTimeMillis()).toString());
+		}
+		
+		System.out.println("Delivering products: " + productsToDeliver);
+		System.out.println("Delivery time: " +  new Date(timeToLocation));
+		drones.put(drone, new Date(timeToLocationAndBack));
+		System.out.println("To Warehouse time: " + drones.get(drone));
+		System.out.println("===========================================================");
+		*/
+		
+		
+		
+		
+		
+		
+		
+		/*long timeToLocation = timeToLocation(drone, droneCurrentTime, deliveryLocation);
+		
+		double distanceLocationToWarehouse = distanceWarehouseDeliveryLocation(deliveryLocation);
+		long timeLocationToWarehouse = Math.round(distanceLocationToWarehouse * 60_000);
+		
+		long timeToLocationAndBack = timeToLocation + timeLocationToWarehouse + productsToDeliver.size() * 2 * 60_000;
+		
+		// update battery charge
+		int updatedBatteryLevel = 0;
+		
+		if(droneCurrentTime.getTime() < System.currentTimeMillis()) {
+			int minutesAtTheWarehouse = (int)(System.currentTimeMillis() - droneCurrentTime.getTime()) / 60_000;
+			int droneBattery = drone.getBattery().getcurrentBatteryLevel();
+			while(droneBattery < drone.getBattery().getMaxBatteryLevel() || minutesAtTheWarehouse > 0) {
+				updatedBatteryLevel += drone.getChargingRate();
+				--minutesAtTheWarehouse;
+			}
+		}
+		
+		System.out.println(drone);
+		
+		// charge if needed
+		updatedBatteryLevel += chargeBattery(drone, deliveryLocation);
+		//substract the battery that would be needed to go to the location and come back
+		updatedBatteryLevel += drone.getBattery().getcurrentBatteryLevel() - (int)(distanceLocationToWarehouse * 2);
+		drone.setBatteryLevel(updatedBatteryLevel);
+		
+		System.out.println("New battery level: " + drone.getBattery().getcurrentBatteryLevel());
+		
+		if(droneCurrentTime.getTime() > System.currentTimeMillis()) {
+			System.out.println("Starting time: " + droneCurrentTime.toString());
+			
+		} else {
+			System.out.println("Starting time: " + new Date(System.currentTimeMillis()).toString());
+		}
+		
+		System.out.println("Delivering products: " + productsToDeliver);
+		System.out.println("Delivery time: " +  new Date(timeToLocation));
+		drones.put(drone, new Date(timeToLocationAndBack));
+		System.out.println("To Warehouse time: " + drones.get(drone));
+		System.out.println("===========================================================");
+		*/
+		//drones.put(drone, new Date(timeToLocationAndBack));
 	}
 
 	private int chargeBattery(Drone drone, Location deliveryLocation) {
