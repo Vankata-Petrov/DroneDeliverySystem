@@ -30,6 +30,10 @@ public class Drone {
 		return this.currentBatteryLevel;
 	}
 	
+	public int getMaxBattery() {
+		return this.maxBatteryLevel;
+	}
+	
 	public int getCapacity() {
 		return this.weightCapacity;
 	}

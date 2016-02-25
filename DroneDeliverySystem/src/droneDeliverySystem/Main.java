@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import exceptions.DroneException;
 import managers.DroneManager;
 /*<<<<<<< HEAD
 =======
@@ -23,7 +24,7 @@ public class Main {
 		
 		Location location = new Location(54, 54);
 		
-		Drone firstDrone = new Drone(5, 100, 100, 5);
+		Drone firstDrone = new Drone(5, 2000, 100, 5);
 		Drone secondDrone = new Drone(5, 2000, 100, 5);
 		Drone thirdDrone = new Drone(5, 2000, 100, 5);
 		Drone fourthDrone = new Drone(5, 2000, 100, 5);
@@ -88,12 +89,15 @@ public class Main {
 		
 	
 		DroneManager d_manager = new DroneManager(droneList);
-		d_manager.executeDelivery(products1, location, "0",new Date(System.currentTimeMillis()));
-		d_manager.executeDelivery(products2, new Location(49, 49), "1", new Date(System.currentTimeMillis()));
-		d_manager.executeDelivery(products3, new Location(120, 47), "2",new Date(System.currentTimeMillis()));
-		d_manager.executeDelivery(products4, new Location(533, 2412), "3",new Date(System.currentTimeMillis()));
-		d_manager.executeDelivery(products5, new Location(112, 643), "4",new Date(System.currentTimeMillis()));
-
+		try {
+			System.out.println(d_manager.executeDelivery(products1, location, "0",new Date(System.currentTimeMillis())));
+			System.out.println(d_manager.executeDelivery(products2, new Location(49, 49), "1", new Date(System.currentTimeMillis())));
+			System.out.println(d_manager.executeDelivery(products3, new Location(120, 47), "2",new Date(System.currentTimeMillis())));
+			System.out.println(d_manager.executeDelivery(products4, new Location(533, 503), "3",new Date(System.currentTimeMillis())));
+			System.out.println(d_manager.executeDelivery(products5, new Location(112, 643), "4",new Date(System.currentTimeMillis())));
+		} catch (DroneException e) {
+			System.out.println(e.getMessage());
+		}
 		//Trying the WarehouseManager
 		/*
 		Map<Product,Integer> productsToDeliver=new HashMap();

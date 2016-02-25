@@ -18,3 +18,8 @@
 1456388953738	Rename local variable 'timeToLocationAndWarehouse'
 1456390348557	Rename local variable 'products'
 1456397028568	Rename local variable 'batterToCharge'
+1456404671645	Rename local variable 'startTime'
+1456405910050	Rename method 'distanceFromWarehouseToDeliveryLocation'
+1456405922441	Rename method 'distWarehouseDeliveryLocation'
+1456406037636	Rename local variable 'batterToCharge'
+1456406739743	Rename method 'deliver'
