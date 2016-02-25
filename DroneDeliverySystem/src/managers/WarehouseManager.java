@@ -5,12 +5,12 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import droneDeliverySystem.Location;
-import droneDeliverySystem.Product;
-import droneDeliverySystem.SupplyRequest;
-import droneDeliverySystem.DeliveryRequest;
-import droneDeliverySystem.BasicDrone;
-import droneDeliverySystem.Warehouse;
+import basicClasses.BasicDrone;
+import basicClasses.DeliveryRequest;
+import basicClasses.Location;
+import basicClasses.Product;
+import basicClasses.SupplyRequest;
+import basicClasses.Warehouse;
 import interfaces.Request;
 
 public final class WarehouseManager {

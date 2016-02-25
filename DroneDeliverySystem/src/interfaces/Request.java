@@ -3,8 +3,8 @@ package interfaces;
 import java.util.Date;
 import java.util.Map;
 
-import droneDeliverySystem.Location;
-import droneDeliverySystem.Product;
+import basicClasses.Location;
+import basicClasses.Product;
 
 public interface Request {
 	String getID();

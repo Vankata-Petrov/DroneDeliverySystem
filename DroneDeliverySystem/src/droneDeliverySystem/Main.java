@@ -5,6 +5,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import basicClasses.BasicDrone;
+import basicClasses.Location;
+import basicClasses.Product;
 import exceptions.DroneException;
 import interfaces.Drone;
 import managers.DroneManager;

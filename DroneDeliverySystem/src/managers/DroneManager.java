@@ -6,9 +6,9 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-import droneDeliverySystem.Location;
-import droneDeliverySystem.Product;
-import droneDeliverySystem.Warehouse;
+import basicClasses.Location;
+import basicClasses.Product;
+import basicClasses.Warehouse;
 import exceptions.DroneException;
 import interfaces.Drone;
 

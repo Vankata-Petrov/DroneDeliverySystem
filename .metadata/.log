@@ -4705,3 +4705,15 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp
 
 !ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-25 22:28:05.821
 !MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-25 22:31:49.572
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-25 22:31:49.685
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-25 22:32:12.084
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 1 0 2016-02-25 22:32:12.630
+!MESSAGE Not running PMD via FileChangeReviewer, as autoBuilding is enabled for this workspace
