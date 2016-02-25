@@ -1,0 +1,18 @@
+package interfaces;
+
+public interface Drone {
+	public String getID();
+	
+	public Battery getBattery();
+	
+	public int getWeightCapacity();
+	
+	public void setBatteryLevel(int currentLevel); 	
+	
+	public int getCurrentBatteryLevel();
+	
+	public int getMaxBatteryCapacity();
+	
+	public int getChargingRate();
+	
+}

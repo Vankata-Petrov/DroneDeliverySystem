@@ -1,0 +1,7 @@
+package droneDeliverySystem;
+
+public class AverageBattery {
+	private final static int MAX_BATTERY_LEVEL;
+	private int currentBatteryLevel;
+	private final int chargingRate;
+}

@@ -7,11 +7,11 @@ import java.util.Map;
 
 import droneDeliverySystem.Location;
 import droneDeliverySystem.Product;
-import droneDeliverySystem.Request;
 import droneDeliverySystem.SupplyRequest;
 import droneDeliverySystem.DeliveryRequest;
-import droneDeliverySystem.Drone;
+import droneDeliverySystem.BasicDrone;
 import droneDeliverySystem.Warehouse;
+import interfaces.Request;
 
 public final class WarehouseManager {
 	public static LinkedList<Warehouse> warehouses = new LinkedList<>();
@@ -32,7 +32,7 @@ public final class WarehouseManager {
 	 * @param location
 	 */
 	
-	private static void init(List<Drone> drones){
+	private static void init(List<BasicDrone> drones){
 		
 	}
 	private static void removeWarehouse(Location location) {

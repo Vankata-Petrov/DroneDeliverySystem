@@ -1,0 +1,55 @@
+package droneDeliverySystem;
+
+import java.util.UUID;
+
+import interfaces.Battery;
+
+public class Drone {
+	
+	private final String ID;
+	private final int weightCapacity;
+	private Battery battery;
+	
+	public Drone(Battery battery, int weightCapacity) {
+		this.ID = UUID.randomUUID().toString();
+		this.battery = battery;
+		this.weightCapacity = weightCapacity;
+	}
+	
+	public String getID() {
+		return this.ID;
+	}
+	
+	public Battery getBattery() {
+		return battery;
+	}
+	
+	public void setBatteryLevel(int currentLevel) {
+		battery.setCurrentBatteryLevel(currentLevel);
+	}
+	
+	public int getCurrentBatteryLevel() {
+		return battery.getcurrentBatteryLevel()
+	}
+	
+	
+	public int getMaxBatteryCapacity() {
+		return battery.getMaxBatteryLevel();
+	}
+	
+	public int getWeightCapacity() {
+		return this.weightCapacity;
+	}
+	
+	public int getChargingRate() {
+		return battery.getChargingRate();
+	}
+	
+	@Override
+	public String toString() {
+		String result = "Drone[ID: " + ID + ", Weight Capacity: " + weightCapacity + ", Max Battery Level: " + maxBatteryLevel +
+				", Current Battery Level: " + currentBatteryLevel + ", Charging rate:" + chargingRate + "]";
+		return result;
+	}
+
+}
