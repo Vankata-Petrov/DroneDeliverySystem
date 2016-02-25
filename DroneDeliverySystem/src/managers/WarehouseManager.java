@@ -60,7 +60,7 @@ public final class WarehouseManager {
 			ArrayList<Drone> drones=new ArrayList<>();
 			drones.add(new Drone(1,2000,500,5));
 			/*DroneManager droneManager=new DroneManager(drones,new Warehouse(location));
-			droneManager.executeDelivery(request.getProducts(), request.getLocation(), request.getID());*/
+			droneManager.executeDelivery(request.getProducts(), request.getLocation(), request.getID());
 		}
 	}
 	

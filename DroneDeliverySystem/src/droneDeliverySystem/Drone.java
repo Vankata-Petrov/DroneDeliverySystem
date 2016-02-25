@@ -38,6 +38,11 @@ public class Drone {
 		return this.chargingRate;
 	}
 	
-	
+	@Override
+	public String toString() {
+		String result = "Drone[ID: " + ID + ", Weight Capacity: " + weightCapacity + ", Max Battery Level: " + maxBatteryLevel +
+				", Current Battery Level: " + currentBatteryLevel + ", Charging rate:" + chargingRate + "]";
+		return result;
+	}
 
 }
