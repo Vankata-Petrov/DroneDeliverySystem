@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import basicClasses.Location;
 import basicClasses.Product;
@@ -17,10 +18,9 @@ public class DroneManager {
 	private Map<Drone, Date> drones;
 	private Warehouse warehouse;
 	
-	public DroneManager(Map<Drone, Date> drones) {
-		this.drones = drones;
-		warehouse = new Warehouse(new Location(42, 42));
-		
+	public DroneManager() {
+		drones = new ConcurrentHashMap<>();
+		warehouse = null;
 	}
 	
 	public DroneManager(Map<Drone, Date> drones, Warehouse warehouse){
@@ -34,15 +34,20 @@ public class DroneManager {
 		Drone minDrone = null;
 		Date arrivalTime = null;
 		
+		Map.Entry<Drone, Date> minEntry = null;
+
 		// LOADING DRONES
 		while(true) {
 			
 			// get the drone that would need the least time to get to the location
-			minDrone = findMin(drones, deliveryLocation);
+			synchronized (drones) {
+				minEntry = findMin(drones, deliveryLocation);				
+			}
+			minDrone = minEntry.getKey();
+			Date droneCurrentTime = minEntry.getValue();
 			
 			if(canCarryAll(products, minDrone)) {
 				
-				Date droneCurrentTime = drones.get(minDrone);
 				// load everything and directly deliver
 				
 				
@@ -61,17 +66,18 @@ public class DroneManager {
 				// returns map @toLoad with products to carry, meanwhile deleting them from @products
 				Map<Product, Integer> toLoad = loadDrone(products, minDrone);
 			
-				Date droneCurrentTime = drones.get(minDrone);
 				// deliver the loaded drone
-			
-				
 				double distanceWarehouseToLocation = distanceWarehouseDeliveryLocation(deliveryLocation);
 				
 				
 				sendDrone(minDrone, droneCurrentTime, toLoad, deliveryLocation, distanceWarehouseToLocation);
 				
 			}
+			// return Entry back to map
+			//drones.put(minDrone, droneCurrentTime);
 		}
+		
+		
 		
 		// return eta as string
 		String estimatedETA = "Request ID: " + requestId + ", Delivery Location: " + deliveryLocation + " Request made at: " 
@@ -79,9 +85,10 @@ public class DroneManager {
 		return estimatedETA; 
 	}
 
-	private Drone findMin(Map<Drone, Date> drones, Location deliveryLocation) throws DroneException {
+	
+	private Map.Entry<Drone, Date> findMin(Map<Drone, Date> drones, Location deliveryLocation) throws DroneException {
 		long smallest = Long.MAX_VALUE;
-		Drone minDrone = null;
+		Map.Entry<Drone, Date> minEntry = null;
 		
 		long currentTimeToLocation = 0;
 		for (Map.Entry<Drone, Date> entry : drones.entrySet()) {
@@ -92,17 +99,18 @@ public class DroneManager {
 				
 				if(smallest > currentTimeToLocation) {
 					smallest = currentTimeToLocation;
-					minDrone = entry.getKey();
+					minEntry = entry;
 				}
 			}
 		}
 		
 		// no drone can reach this location 
-		if(minDrone == null) {
+		if(minEntry == null) {
 			throw new DroneException("No drone can reach this location!");
 		}
 		
-		return minDrone;
+		drones.remove(minEntry.getKey());
+		return minEntry;
 	}
 
 	private long timeToLocation(Drone currentDrone, Date warehouseArrivalTime, Location deliveryLocation) {
@@ -243,10 +251,11 @@ public class DroneManager {
 		System.out.println("Start delivery: " + new Date(timeToWarehouse + chargingTime + productsCount * 60_000).toString());
 		System.out.println("Delivery to location: " + new Date(timeToWarehouse + chargingTime + timeToLocation 
 				+ productsCount * 2 * 60_000).toString());
-		
-		drones.put(drone, new Date(timeToWarehouse + chargingTime + timeToLocation * 2
-				+ productsCount * 2 * 60_000));
-		
+		synchronized(drones) {
+			drones.put(drone, new Date(timeToWarehouse + chargingTime + timeToLocation * 2
+					+ productsCount * 2 * 60_000));
+			
+		}
 		
 		
 		System.out.println("To Warehouse time: " + new Date(timeToWarehouse + chargingTime + timeToLocation * 2 
@@ -299,5 +308,9 @@ public class DroneManager {
 		return result;
 	}
 
+	
+	public void addDrone() {
+		
+	}
 
 }

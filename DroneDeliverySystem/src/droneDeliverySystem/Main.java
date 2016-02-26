@@ -8,6 +8,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import basicClasses.BasicDrone;
 import basicClasses.Location;
 import basicClasses.Product;
+import basicClasses.Warehouse;
 import exceptions.DroneException;
 import interfaces.Drone;
 import managers.DroneManager;
@@ -89,7 +90,7 @@ public class Main {
 		//rc.run();
 		
 	
-		DroneManager d_manager = new DroneManager(droneList);
+		DroneManager d_manager = new DroneManager(droneList, new Warehouse(new Location(42, 42)));
 		try {
 			System.out.println(d_manager.executeDelivery(products1, location, "0",new Date(System.currentTimeMillis())));
 			System.out.println("===========================================================");

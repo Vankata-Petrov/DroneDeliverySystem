@@ -1,11 +1,14 @@
 package droneDeliverySystem;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+
+import basicClasses.DeliveryRequest;
+import basicClasses.Location;
+import basicClasses.Product;
+import basicClasses.SupplyRequest;
+import interfaces.Request;
 
 public class Parser {
 	
@@ -40,6 +43,7 @@ public class Parser {
 		
 		Location location = new Location(Integer.getInteger(coordinates[0]), Integer.getInteger(coordinates[1]));
 		
+		// != instead of == ?
 		while(ui.stopper() == "stop") {
 			products.put(new Product(ui.askForProductName(), Double.parseDouble(ui.askForProductQuantity())), Integer.getInteger(ui.askForHowMantProducts()));
 		}

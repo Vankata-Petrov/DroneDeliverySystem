@@ -1,17 +1,7 @@
 package requests;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-
-import droneDeliverySystem.Location;
 import droneDeliverySystem.Parser;
-import droneDeliverySystem.Product;
-import droneDeliverySystem.Request;
-import droneDeliverySystem.SupplyRequest;
+import interfaces.Request;
 
 public class RequestProducer extends Thread {
 
