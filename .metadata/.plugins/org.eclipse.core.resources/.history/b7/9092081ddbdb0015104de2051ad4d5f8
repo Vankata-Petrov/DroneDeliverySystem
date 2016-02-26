@@ -1,0 +1,28 @@
+package droneDeliverySystem;
+
+import interfaces.Battery;
+
+public class AverageBattery implements Battery{
+	private final static int MAX_BATTERY_LEVEL = 2000;
+	private int currentBatteryLevel;
+	private final int chargingRate;
+	
+	public AverageBattery() { }
+	
+	
+	@Override
+	public int getMaxBatteryLevel() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	@Override
+	public int getcurrentBatteryLevel() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	@Override
+	public int getChargingRate() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+}

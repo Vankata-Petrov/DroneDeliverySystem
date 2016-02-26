@@ -15,6 +15,8 @@ import droneDeliverySystem.SupplyRequest;
 import droneDeliverySystem.DeliveryRequest;
 import droneDeliverySystem.Drone;
 import droneDeliverySystem.Warehouse;
+import basicClasses.BasicDrone;
+
 
 public final class WarehouseManager {
 	public static LinkedList<Warehouse> warehouses = new LinkedList<>();
@@ -41,7 +43,7 @@ public final class WarehouseManager {
 	 * @param location
 	 */
 	
-	private static void init(List<Drone> drones){
+	private static void init(List<BasicDrone> drones){
 		
 	}
 	private static void removeWarehouse(Location location) {

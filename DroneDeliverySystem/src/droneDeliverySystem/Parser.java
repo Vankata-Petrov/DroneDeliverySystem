@@ -1,15 +1,19 @@
 package droneDeliverySystem;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.Date;
+
 import java.util.HashMap;
 import java.util.Map;
 
+import basicClasses.DeliveryRequest;
+import basicClasses.Location;
+import basicClasses.Product;
+import basicClasses.SupplyRequest;
+import interfaces.Request;
+
 public class Parser {
 	
-	public Request createRequest() {
+	/*public Request createRequest() {
 		Map<Product, Integer> products = new HashMap<>();
 		
 		UserInterface ui = new UserInterface();
@@ -34,8 +38,11 @@ public class Parser {
 		
 		else {
 			return new DeliveryRequest(date, location, products);
+		// != instead of == ?
+		while(ui.stopper() == "stop") {
+			products.put(new Product(ui.askForProductName(), Double.parseDouble(ui.askForProductQuantity())), Integer.getInteger(ui.askForHowMantProducts()));
 		}
 		
 		
-	}
+	}*/
 }

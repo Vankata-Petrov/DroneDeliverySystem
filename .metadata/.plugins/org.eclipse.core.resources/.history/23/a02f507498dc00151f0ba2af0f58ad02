@@ -1,0 +1,30 @@
+package droneDeliverySystem;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import basicClasses.Warehouse;
+import interfaces.Drone;
+
+public class DeliverySystem {
+	
+	private List<Warehouse> warehouses;
+	
+	public DeliverySystem() {
+		warehouses = new ArrayList<>();
+	}
+	
+	void addDrone(Drone drone, Warehouse warehouse) {
+		
+	}
+	
+	void sendRequest(String request) {
+		// process request
+		
+		//-
+		
+		
+	}
+
+}
+ 

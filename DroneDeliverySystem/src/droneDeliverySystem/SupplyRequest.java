@@ -1,8 +1,14 @@
 package droneDeliverySystem;
 
+import basicClasses.Product;
+import basicClasses.Location;
+
 import java.util.Date;
+
 import java.util.Map;
 import java.util.UUID;
+
+import interfaces.Request;
 
 public class SupplyRequest implements Request {
 
@@ -34,7 +40,7 @@ public class SupplyRequest implements Request {
 
 
 	@Override
-	//We don't need it here
+	//We don't need Location in Supply So it is null
 	public Location getLocation() {
 		return null;
 	}

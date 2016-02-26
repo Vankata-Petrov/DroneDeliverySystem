@@ -1,0 +1,47 @@
+package droneDeliverySystem;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import basicClasses.Warehouse;
+import interfaces.Drone;
+import managers.DroneManager;
+import managers.WarehouseManager;
+import requests.RequestManager;
+
+public class DeliverySystem {
+	
+	private Map<Warehouse, Drone> warehouses;
+	private DroneManager droneManager;
+	private WarehouseManager warehouseManager;
+	private RequestManager requestManager;
+	
+	
+	public DeliverySystem() {
+		warehouses = new ArrayList<>();
+		
+	}
+	
+	public DeliverySystem(List<Warehouse> warehouses) {
+		this.warehouses = warehouses;
+	}
+	
+	
+	public void addWarehouse(Warehouse newWarehouse) {
+		warehouses.add(newWarehouse);
+	}
+	
+	public void addDrone(Drone drone, Warehouse warehouse) {
+		
+	}
+	
+	public void executeRequest(String request) {
+		// process request, wrap it in Request class
+		
+		//-
+		
+		
+	}
+
+}
+ 

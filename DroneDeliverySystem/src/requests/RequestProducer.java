@@ -1,5 +1,9 @@
 package requests;
 
+import basicClasses.Product;
+import basicClasses.Location;
+import basicClasses.SupplyRequest;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -13,11 +17,8 @@ import java.util.Map;
 import javax.xml.crypto.Data;
 
 import droneDeliverySystem.DeliveryRequest;
-import droneDeliverySystem.Location;
 import droneDeliverySystem.Parser;
-import droneDeliverySystem.Product;
-import droneDeliverySystem.Request;
-import droneDeliverySystem.SupplyRequest;
+import interfaces.Request;
 
 public class RequestProducer extends Thread {
 

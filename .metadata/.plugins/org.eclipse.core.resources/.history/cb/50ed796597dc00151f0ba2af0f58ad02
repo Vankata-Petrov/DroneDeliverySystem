@@ -1,0 +1,14 @@
+package requests;
+
+
+import java.util.LinkedList;
+
+import interfaces.Request;
+
+public class RequestManager {
+	
+	public void takeRequest(String request) {
+		
+	}
+
+}

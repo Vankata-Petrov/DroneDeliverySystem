@@ -1,15 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.util.UUID"/>
-<fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="droneDeliverySystem.Drone"/>
 <fullyQualifiedTypeName name="droneDeliverySystem.Location"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="javax.print.attribute.HashAttributeSet"/>
 <fullyQualifiedTypeName name="droneDeliverySystem.Product"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
-<fullyQualifiedTypeName name="java.util.Map.Entry"/>
 <fullyQualifiedTypeName name="droneDeliverySystem.Warehouse"/>
 <fullyQualifiedTypeName name="managers.DroneManager"/>
+<fullyQualifiedTypeName name="java.util.concurrent.locks.ReentrantLock"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.lang.Long"/>
+<fullyQualifiedTypeName name="java.lang.Enum"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="exceptions.DroneException"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="interfaces.Battery"/>
+<fullyQualifiedTypeName name="java.util.UUID"/>
+<fullyQualifiedTypeName name="droneDeliverySystem.AverageBattery"/>
+<fullyQualifiedTypeName name="interfaces.Drone"/>
+<fullyQualifiedTypeName name="droneDeliverySystem.ChineseBattery"/>
+<fullyQualifiedTypeName name="java.util.Map.Entry"/>
+<fullyQualifiedTypeName name="basicClasses.Location"/>
+<fullyQualifiedTypeName name="interfaces.Request"/>
+<fullyQualifiedTypeName name="requests.RequestsData"/>
+<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="droneDeliverySystem.DeliverySystem"/>
+<fullyQualifiedTypeName name="managers.WarehouseManager"/>
+<fullyQualifiedTypeName name="requests.RequestManager"/>
+<fullyQualifiedTypeName name="java.util.concurrent.ConcurrentHashMap"/>
+<fullyQualifiedTypeName name="basicClasses.Warehouse"/>
 </qualifiedTypeNameHistroy>

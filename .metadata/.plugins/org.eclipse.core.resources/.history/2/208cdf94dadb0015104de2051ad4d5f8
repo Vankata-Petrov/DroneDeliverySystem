@@ -1,0 +1,7 @@
+package interfaces;
+
+public interface Battery {
+	public int getMaxBatteryLevel();
+	public int currentBatteryLevel();
+	
+}

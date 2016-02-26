@@ -1,11 +1,13 @@
 package requests;
 
-import droneDeliverySystem.Request;
+
 import java.util.LinkedList;
+
+import interfaces.Request;
 
 public class RequestManager {
 	
-	private LinkedList<Request> requests = new LinkedList<>();
+private LinkedList<Request> requests = new LinkedList<>();
 	
 	public Request getFront() {
 		return requests.poll();
@@ -41,6 +43,5 @@ public class RequestManager {
 		return requests.poll();		
 		
 	}
-	
 
 }
