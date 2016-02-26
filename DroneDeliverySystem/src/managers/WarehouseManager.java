@@ -1,9 +1,12 @@
 package managers;
 
+import java.security.KeyStore.Entry;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+
+import javax.swing.text.html.parser.Entity;
 
 import droneDeliverySystem.Location;
 import droneDeliverySystem.Product;
@@ -20,6 +23,12 @@ public final class WarehouseManager {
 	 * Will need this method if we have more warehouses
 	 * @param location
 	 */
+	
+	public void add() {
+		warehouses.add(new Warehouse(this.location));
+	}
+	
+	
 	private static void addWarehouse(Location location) {
 		if (warehouses.contains(warehouses) == false) {
 			warehouses.add(new Warehouse(location));
@@ -60,11 +69,9 @@ public final class WarehouseManager {
 			ArrayList<Drone> drones=new ArrayList<>();
 			drones.add(new Drone(1,2000,500,5));
 			/*DroneManager droneManager=new DroneManager(drones,new Warehouse(location));
-			droneManager.executeDelivery(request.getProducts(), request.getLocation(), request.getID());*/
+			droneManager.executeDelivery(request.getProducts(), request.getLocation(), request.getID());
 		}
-	}
-	
-	*/
+	}*/
 	public boolean productsAvailabilityChecker(Map<Product, Integer> products) {
 		int numberOfAvailableProducts=0;
 		for (Map.Entry<Product, Integer> entry : products.entrySet()) {
@@ -83,10 +90,11 @@ public final class WarehouseManager {
 	
 	
 	public void supply(Map<Product, Integer> products){
-		int indexOfWarehouse = warehouses.indexOf(new Warehouse(location));
-		indexOfWarehouse=0;
+		//int indexOfWarehouse = warehouses.indexOf(new Warehouse(location));
+		int indexOfWarehouse=0;
 		if (indexOfWarehouse != -1) {
 			for (Map.Entry<Product, Integer> entry : products.entrySet()) {
+				System.out.println(entry.getKey() + " " + entry.getValue());
 				warehouses.get(indexOfWarehouse).supply(entry.getKey(), entry.getValue());
 			}
 		} else {

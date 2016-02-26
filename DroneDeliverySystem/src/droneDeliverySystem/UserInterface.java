@@ -22,6 +22,22 @@ public class UserInterface {
 		return sb.toString();		
 	}
 	
+	public String typeOfRequest() {
+		StringBuilder sb = new StringBuilder();
+		System.out.println("What kind of request do you want ");
+		try{
+		    BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
+		    String s = bufferRead.readLine();
+		    sb.append(s);
+		}
+		catch(IOException e)
+		{
+			e.printStackTrace();
+		}
+		
+		return sb.toString();	
+	}
+	
 	public String[] askForLocation() {
 		StringBuilder sb = new StringBuilder();
 		System.out.println("Add coordinates");
@@ -35,7 +51,7 @@ public class UserInterface {
 			e.printStackTrace();
 		}
 		
-		return sb.toString().split("");	
+		return sb.toString().split(" ");	
 	}
 	
 	public String askForProductName() {

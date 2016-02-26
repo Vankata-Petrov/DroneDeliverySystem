@@ -9,34 +9,18 @@ import java.util.Map;
 
 public class Parser {
 	
-	public Request createSupplyRequest() {
-		Map<Product, Integer> products = new HashMap<>();
-		
-		System.out.println("LOLOLOL");
-		
-		UserInterface ui = new UserInterface();
-		
-		Date date = new Date();
-		
-		String[] coordinates = ui.askForLocation();
-		
-		Location location = new Location(Integer.getInteger(coordinates[0]), Integer.getInteger(coordinates[1]));
-		
-		while(ui.stopper() == "stop") {
-			products.put(new Product(ui.askForProductName(), Double.parseDouble(ui.askForProductQuantity())), Integer.getInteger(ui.askForHowMantProducts()));
-		}
-				
-		return new SupplyRequest(date, location, products);
-	}
-
-	public DeliveryRequest createDeliveryRequest() {
+	public Request createRequest() {
 		Map<Product, Integer> products = new HashMap<>();
 		
 		UserInterface ui = new UserInterface();
 		
 		Date date = new Date();
 		
+		String requestType = ui.typeOfRequest();
+		
 		String[] coordinates = ui.askForLocation();
+		
+		System.out.println(coordinates[0] + " " + coordinates[1]);
 		
 		Location location = new Location(Integer.getInteger(coordinates[0]), Integer.getInteger(coordinates[1]));
 		
@@ -44,7 +28,14 @@ public class Parser {
 			products.put(new Product(ui.askForProductName(), Double.parseDouble(ui.askForProductQuantity())), Integer.getInteger(ui.askForHowMantProducts()));
 		}
 		
-		return new DeliveryRequest(date, location, products);
+		if(requestType == "delivery") {
+			return new SupplyRequest(date, location, products);
+		}
+		
+		else {
+			return new DeliveryRequest(date, location, products);
+		}
+		
+		
 	}
-
 }

@@ -37,7 +37,7 @@ public class RequestManager {
 				e.printStackTrace();
 			}
 		}
-		
+		System.out.println(requests.peek().getClass().getName());
 		return requests.poll();		
 		
 	}

@@ -1,5 +1,6 @@
 package droneDeliverySystem;
 
+import java.io.File;
 import java.util.ArrayList;
 
 import java.util.Date;
@@ -9,13 +10,10 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import managers.DroneManager;
-<<<<<<< HEAD
-=======
 import managers.WarehouseManager;
 import requests.RequestManager;
 import requests.RequestProducer;
 import requests.RequestsConsumer;
->>>>>>> 36df7563b32f527a216aea7294013e9807a44df7
 
 public class Main {
 
@@ -48,27 +46,29 @@ public class Main {
 		products.put(milk, 2);
 		products.put(eggs, 20);
 		
+		WarehouseManager wm = new WarehouseManager();
+		wm.warehouses.add(new Warehouse(new Location(42, 42)));
+		wm.supply(products);
+		
 		RequestManager rm = new RequestManager();
-		RequestProducer rp = new RequestProducer(rm);
+		RequestProducer rp = new RequestProducer(rm, new File("/home/nikola/go.txt"));
 		RequestsConsumer rc = new RequestsConsumer(rm);
 		
 		rp.start();
 		rc.start();
-		//rp.run();
-		//rc.run();
 		
+		//Parser p = new Parser();
 		
-<<<<<<< HEAD
-		DroneManager d_manager = new DroneManager(droneList);
-		d_manager.executeDelivery(products, location, "0",new Date(System.currentTimeMillis()));
-		d_manager.executeDelivery(products, new Location(32, 49), "1", new Date(System.currentTimeMillis()));
-		d_manager.executeDelivery(products, new Location(120, 47), "2",new Date(System.currentTimeMillis()));
-		d_manager.executeDelivery(products, new Location(533, 2412), "3",new Date(System.currentTimeMillis()));
-		d_manager.executeDelivery(products, new Location(112, 643), "4",new Date(System.currentTimeMillis()));
-=======
+		//Request r = p.createRequest();
+		
+		//DroneManager d_manager = new DroneManager(droneList);
+		//d_manager.executeDelivery(products, location, "0",new Date(System.currentTimeMillis()));
+		//d_manager.executeDelivery(products, new Location(32, 49), "1", new Date(System.currentTimeMillis()));
+		//d_manager.executeDelivery(products, new Location(120, 47), "2",new Date(System.currentTimeMillis()));
+		//d_manager.executeDelivery(products, new Location(533, 2412), "3",new Date(System.currentTimeMillis()));
+		//d_manager.executeDelivery(products, new Location(112, 643), "4",new Date(System.currentTimeMillis()));
 		//DroneManager d_manager = new DroneManager(droneList);
 		//d_manager.executeDelivery(products, location, "232");
->>>>>>> 36df7563b32f527a216aea7294013e9807a44df7
 		//Trying the WarehouseManager
 		/*
 		Map<Product,Integer> productsToDeliver=new HashMap();
