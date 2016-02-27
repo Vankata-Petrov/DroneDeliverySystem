@@ -3,6 +3,7 @@ package requests;
 
 import java.util.LinkedList;
 
+import basicClasses.DeliveryRequest;
 import interfaces.Request;
 
 public class RequestManager {
@@ -21,14 +22,13 @@ private LinkedList<Request> requests = new LinkedList<>();
 	 */
 	synchronized
 	public void addRequest(Request request) {
-		if(request.getClass().getSimpleName() == "DeliveryRequest") {
-			requests.add(request);
+		if(request instanceof DeliveryRequest) {
+			requests.addLast(request);
 		} else {
 			requests.addFirst(request);
 		}
 		notifyAll();
 	}
-	
 	synchronized
 	public Request sendRequest() {
 		while(requests.size() == 0) {

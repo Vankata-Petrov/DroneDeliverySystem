@@ -1,20 +1,15 @@
 package managers;
 
 import java.security.KeyStore.Entry;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
 import javax.swing.text.html.parser.Entity;
 
-import droneDeliverySystem.Location;
-import droneDeliverySystem.Product;
-import droneDeliverySystem.Request;
-import droneDeliverySystem.SupplyRequest;
-import droneDeliverySystem.DeliveryRequest;
-import droneDeliverySystem.Drone;
-import droneDeliverySystem.Warehouse;
+import basicClasses.Location;
+import basicClasses.Product;
+import basicClasses.Warehouse;
 import basicClasses.BasicDrone;
 
 

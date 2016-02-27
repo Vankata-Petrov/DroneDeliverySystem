@@ -1,6 +1,9 @@
 package interfaces;
 
 import java.util.Date;
+
+import basicClasses.Product;
+
 import java.util.Map;
 
 import basicClasses.Location;
@@ -10,6 +13,5 @@ public interface Request {
 	String getID();
 	Date getTimestamp();
 	Map<Product, Integer> getProducts();
-	// Think it will be useful
 	Location getLocation();
 }

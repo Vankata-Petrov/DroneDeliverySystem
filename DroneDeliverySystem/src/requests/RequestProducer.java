@@ -3,27 +3,23 @@ package requests;
 import basicClasses.Product;
 import basicClasses.Location;
 import basicClasses.SupplyRequest;
+import basicClasses.DeliveryRequest;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.xml.crypto.Data;
-
-import droneDeliverySystem.DeliveryRequest;
-import droneDeliverySystem.Parser;
-import interfaces.Request;
+//import javax.xml.crypto.Data;
 
 public class RequestProducer extends Thread {
 
 	private RequestManager requestManager;
-	private Parser parser;
+	//private Parser parser;
 	private File file;
 
 	public RequestProducer(RequestManager requestManager, File file) {
@@ -58,7 +54,6 @@ public class RequestProducer extends Thread {
 					} catch (Exception e) {// this generic but you can control
 											// another types of exception
 					}
-					
 					DeliveryRequest dr = new DeliveryRequest(parsedDate, location, products);
 					requestManager.addRequest(dr);
 				} else if (line.contains("supply") == true) {
@@ -83,7 +78,6 @@ public class RequestProducer extends Thread {
 											// another types of exception
 					}
 					SupplyRequest dr = new SupplyRequest(parsedDate, location, products);
-					System.out.println("wtf");
 					requestManager.addRequest(dr);
 				}
 			}
