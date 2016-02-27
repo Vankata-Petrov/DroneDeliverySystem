@@ -49,9 +49,11 @@ public class RequestProducer extends Thread {
 					Date parsedDate = null;
 
 					try {
-						SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss.SSS");
-						parsedDate = dateFormat.parse(deliveryContent[2] + deliveryContent[3]);
-					} catch (Exception e) {// this generic but you can control
+						SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm");
+						parsedDate = dateFormat.parse(deliveryContent[2] + " " + deliveryContent[3]);
+					} catch (Exception e) {
+											System.out.println("Wrong Date Format");
+											// this generic but you can control
 											// another types of exception
 					}
 					DeliveryRequest dr = new DeliveryRequest(parsedDate, location, products);
@@ -72,8 +74,8 @@ public class RequestProducer extends Thread {
 					Date parsedDate = null;
 
 					try {
-						SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss.SSS");
-						parsedDate = dateFormat.parse(deliveryContent[2] + deliveryContent[3]);
+						SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm");
+						parsedDate = dateFormat.parse(deliveryContent[2] + " " + deliveryContent[3]);
 					} catch (Exception e) {// this generic but you can control
 											// another types of exception
 					}

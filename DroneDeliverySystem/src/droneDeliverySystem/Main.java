@@ -1,6 +1,7 @@
 package droneDeliverySystem;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 
@@ -85,29 +86,31 @@ public class Main {
 		
 		//Request r = p.createRequest();
 		
-		//DroneManager d_manager = new DroneManager(droneList);
-		//d_manager.executeDelivery(products, location, "0",new Date(System.currentTimeMillis()));
-		//d_manager.executeDelivery(products, new Location(32, 49), "1", new Date(System.currentTimeMillis()));
-		//d_manager.executeDelivery(products, new Location(120, 47), "2",new Date(System.currentTimeMillis()));
-		//d_manager.executeDelivery(products, new Location(533, 2412), "3",new Date(System.currentTimeMillis()));
-		//d_manager.executeDelivery(products, new Location(112, 643), "4",new Date(System.currentTimeMillis()));
-		//DroneManager d_manager = new DroneManager(droneList);
-		//d_manager.executeDelivery(products, location, "232");
+		/*DroneManager d_manager = new DroneManager(droneList);
+		d_manager.executeDelivery(products, location, "0",new Date(System.currentTimeMillis()));
+		d_manager.executeDelivery(products, new Location(32, 49), "1", new Date(System.currentTimeMillis()));
+		d_manager.executeDelivery(products, new Location(120, 47), "2",new Date(System.currentTimeMillis()));
+		d_manager.executeDelivery(products, new Location(533, 2412), "3",new Date(System.currentTimeMillis()));
+		d_manager.executeDelivery(products, new Location(112, 643), "4",new Date(System.currentTimeMillis()));
+		DroneManager d_manager = new DroneManager(droneList);
+		d_manager.executeDelivery(products, location, "232");*/
 		
 		
-		/*Map<Product, Integer> products4 = new HashMap<>();
+		Map<Product, Integer> products4 = new ConcurrentHashMap<>();
 		products4.put(apple, 5);
 		products4.put(banana, 3);
 		products4.put(nescafe, 9);
 		products4.put(milk, 2);
 		products4.put(eggs, 20);
 		
-		Map<Product, Integer> products5 = new HashMap<>();
+		Map<Product, Integer> products5 = new ConcurrentHashMap<>();
 		products5.put(apple, 5);
 		products5.put(banana, 3);
 		products5.put(nescafe, 9);
 		products5.put(milk, 2);
-		products5.put(eggs, 20);	*/	
+		products5.put(eggs, 20);	
+		
+		Date parsedDate = null;
 	
 		/*DroneManager d_manager = new DroneManager(droneList, new Warehouse(new Location(42, 42)));
 		try {
